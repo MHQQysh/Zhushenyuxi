@@ -1,7 +1,5 @@
 
 <p align="center"><h2>诸神愚戏 WIKI</h2></p>
-<p align="center"> <h3>基于《诸神愚戏》小说搭建的WIKI网站</h3></p>
-
 
 ------------------------------
 
@@ -27,28 +25,47 @@
 无论是想了解相关内容，或者创作同人，本WIKI都将是你最好的参考资源。
 
 
-## 加入我们
-如果你是《诸神愚戏》的忠实读者或已经整理了相关资料，
+## 个人部署经验
 
-我们诚挚邀请你参与编辑和完善本WIKI。
+https://github.com/Mueoink/zsyx-wiki
 
-每一位参与者的贡献都能让这份资料更加完善和优秀。
-
-如果你也愿意为本WIKI的完善贡献力量，我们非常欢迎你的加入！
-
-**联系邮箱：mueo@mueoo.com**
-
-## 本地部署
-
-拉取 WIKI 项目
-
+powershell 里面跑
 ```
 conda deactivate
 cd C:\Users\13613\Desktop\zsyx\zsyx-wiki
 pnpm install
 pnpm docs:dev
 ```
+pnpm docs:build 本地不需要运行这行 没有用 或者如果要的话 运行
+```
+pnpm docs:build 
+pnpm docs:preview
+```
 
-提交前
+### 一些经验
+1. 构建方面 初始需要
+	1. workflows这个完全不需要改 其实就是我自己本地跑build会出来的内容 但是注意 因为本地的地址和网上的不同 所以本地直接打开html肯定是链接不到，所以本地就是用dev就行，正确纠正的方式就是`docs/.vitepress/config.mjs`中需要加的一个
+```
+export default defineConfig({
+// 原来大小写也是重要的 我真没招了
+  base: '/Zhushenyuxi/',
+```
+2. 然后文件中docs/wiki下是所有自己要写的md文本 具体版面格式见`docs/.vitepress/config.mjs`里面设置了左边的目录。
+3. 注意所有图片放在public下面 docs\public\profession\profession.jpg
+引用的时候像下面这样引用
+```
+<script setup>
+import { withBase } from 'vitepress'
+const galleryImages = [
+  { src: withBase('/profession/profession.jpg'), text: 'by:零玲' },
+];
+</script>
 
-pnpm docs:build
+## 1
+<div v-for="(item, index) in galleryImages" :key="index">
+  <img :src="item.src" style="width: 100%; display: block;" />
+</div>
+
+```
+
+
