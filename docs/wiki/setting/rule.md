@@ -9,7 +9,7 @@ outline : 2-3
 <MemberBlock :filterNames="teamMembers" />
 
 <script setup>
-
+import { withBase } from 'vitepress'
 const teamMembers = [
 '槐安',
 'Mars',
@@ -19,7 +19,7 @@ const teamMembers = [
 ];
 
 const galleryImages = [
-  { src: 'profession.jpg', text: 'by:零玲' },
+  { src: withBase('/profession/profession.jpg'), text: 'by:零玲' },
 ];
 </script>
 

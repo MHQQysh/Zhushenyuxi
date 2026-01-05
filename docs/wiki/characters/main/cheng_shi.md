@@ -6,7 +6,7 @@
 <MemberBlock :filterNames="names" />
 
 <script setup>
-
+import { withBase } from 'vitepress'
 const names = [
 '愚者','几个孤独',
 '琥珀',
@@ -17,11 +17,11 @@ const names = [
 ];
 
 const galleryImages = [
-  { src: '/chengshi/chengshi_1.png', text: 'by:慧星和悔云' },
-  { src: '/chengshi/chengshi_2.png', text: 'by:零玲' },
-  { src: '/chengshi/chengshi_3.png', text: 'by:25小时持续睡眠' },
-  { src: '/chengshi/chengshi_4.png', text: 'by:风和水' },
-  { src: '/chengshi/chengshi_5.png', text: 'by:我从不信命' },
+  { src: withBase('/chengshi/chengshi_1.png'), text: 'by:慧星和悔云' },
+  { src: withBase('/chengshi/chengshi_2.png'), text: 'by:零玲' },
+  { src: withBase('/chengshi/chengshi_3.png'), text: 'by:25小时持续睡眠' },
+  { src: withBase('/chengshi/chengshi_4.png'), text: 'by:风和水' },
+  { src: withBase('/chengshi/chengshi_5.png'), text: 'by:我从不信命' },
 ];
 </script>
 

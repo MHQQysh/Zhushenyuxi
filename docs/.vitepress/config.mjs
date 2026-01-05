@@ -95,6 +95,8 @@ const teekConfig = defineTeekConfig({
 
 // VitePress 配置
 export default defineConfig({
+
+// 原来大小写也是重要的 我真没招了
   base: '/Zhushenyuxi/',
   extends: teekConfig,
   title: "诸神愚戏 WIKI",
