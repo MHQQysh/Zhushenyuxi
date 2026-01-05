@@ -17,12 +17,20 @@ const teamMembers = [
 '翎洛',
 ];
 
+const galleryImages = [
+  { src: 'profession.jpg', text: 'by:零玲' },
+];
 </script>
+
 
 :::
 
 
 ## 职业表
+
+<div v-for="(item, index) in galleryImages" :key="index">
+  <img :src="item.src" style="width: 100%; display: block;" />
+</div>
 
 ### 诞育
 
