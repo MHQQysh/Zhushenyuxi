@@ -50,7 +50,7 @@ export default defineConfig({
 // 原来大小写也是重要的 我真没招了
   base: '/Zhushenyuxi/',
 ```
-2. 然后文件中docs/wiki下是所有自己要写的md文本 具体版面格式见`docs/.vitepress/config.mjs`里面设置了左边的目录。
+2. 文件中docs/wiki下是所有自己要写的md文本 具体版面格式见`docs/.vitepress/config.mjs`里面设置了左边的目录。
 3. 注意所有图片放在public下面 docs\public\profession\profession.jpg
 引用的时候像下面这样引用
 ```
