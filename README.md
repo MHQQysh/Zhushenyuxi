@@ -43,22 +43,9 @@
 拉取 WIKI 项目
 
 ```
-git clone https://github.com/Mueoink/zsyx-wiki.git
-```
-
-安装依赖
-
-```
+conda deactivate
+cd C:\Users\13613\Desktop\zsyx\zsyx-wiki
 pnpm install
-```
-
-启动 WIKI
-```
 pnpm docs:dev
-```
-
-构建
-```
-pnpm docs:build
 ```
 
