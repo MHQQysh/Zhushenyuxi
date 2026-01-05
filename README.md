@@ -49,3 +49,6 @@ pnpm install
 pnpm docs:dev
 ```
 
+提交前
+
+pnpm docs:build
