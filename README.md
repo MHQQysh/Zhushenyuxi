@@ -68,4 +68,6 @@ const galleryImages = [
 
 ```
 
+### 整体效果
 
+![alt text](image.png)
