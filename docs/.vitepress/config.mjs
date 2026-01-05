@@ -95,7 +95,7 @@ const teekConfig = defineTeekConfig({
 
 // VitePress 配置
 export default defineConfig({
-  base: '/zhushenyuxi/',
+  base: '/Zhushenyuxi/',
   extends: teekConfig,
   title: "诸神愚戏 WIKI",
   head: [["link", { rel: "icon", href: "/logo.png" }]],
